@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="content">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ürün Ekle</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="bookAddForm">
+            <div class="mb-3">
+              <label for="Id">Id</label>
+              <input type="number" id="Id" formControlName="Id" class="form-control" placeholder="Id">
+            </div>
+
+            <div class="mb-3">
+              <label for="AuthorId">Yazar Id</label>
+              <input type="number" id="AuthorId" formControlName="AuthorId" class="form-control" placeholder="AuthorId">
+            </div>
+            <div class="mb-3">
+              <label for="Name">Kitap Adı</label>
+              <input type="text" id="Name" formControlName="Name" class="form-control" placeholder="Ürün adı">
+            </div>
+
+            <div class="mb-3">
+              <label for="CategoryId">Kategori</label>
+              <select  type="number" id="CategoryId" formControlName="CategoryId" class="form-control" name="CategoryId" >
+                <option  *ngFor="let category of categories" value="{{category.id}}">
+                  {{category.name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="Page">Sayfa</label>
+              <input type="number" id="Page" formControlName="Page" class="form-control" placeholder="sayfa">
+            </div>
+            <label for="Description">Açıklama</label>
+            <div class="mb-3">
+              <input type="text" id="Description" formControlName="Description" class="form-control" placeholder="description">
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button  class="btn btn-fill btn-primary" (click)="consoleLook(bookAddForm)">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

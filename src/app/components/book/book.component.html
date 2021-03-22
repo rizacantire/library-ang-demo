@@ -1,0 +1,18 @@
+<table  class="table">
+  <thead>
+    <th>Kitap Adı</th>
+    <th>Yazar</th>
+    <th>Sayfa</th>
+    <th>Açıklama</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.name}}</td>
+      <td>{{book.authorId}}</td>
+      <td>{{book.page}}</td>
+      <td>{{book.description}}</td>
+      <td>{{book.categoryId}}</td>
+    </tr>
+
+  </tbody>
+</table>
